@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "HelloChrome",
-  "short_name": "HelloChrome",
+  "name": "HelloPWA",
+  "short_name": "HelloPWA",
   "description": "",
   "version": "0.0.1",
   "minimum_chrome_version": "38",
@@ -11,9 +11,9 @@
     "128": "assets/icon_128.png"
   },
 
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
-  }
+  "serviceworker": {
+    "src": "background.js",
+    "scope": "/",
+    "use_cache": false
+  },
 }
